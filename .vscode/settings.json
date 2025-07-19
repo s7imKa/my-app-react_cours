@@ -82,7 +82,7 @@
 
 	// ─── Термінал ───────────────────────────────────────
 	"terminal.integrated.fontFamily": "PragmataPro Liga",
-	"terminal.integrated.tabs.enabled": false,
+	"terminal.integrated.tabs.enabled": true,
 	"terminal.integrated.cursorStyle": "line",
 
 	// ─── Prettier ───────────────────────────────────────

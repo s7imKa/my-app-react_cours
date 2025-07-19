@@ -6,7 +6,7 @@ export default function AmployeesList({data}) {
 	return (
 		<ul className='amployees-list list-group'>
 			{data.map((employees, index) => (
-				<AmployeesListItem key={index} name={employees.name} salary={employees.salary}/>
+				<AmployeesListItem key={index} {...employees} />
 			))}
 	
 		</ul>

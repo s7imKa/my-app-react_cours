@@ -1,8 +1,10 @@
 import './amployees-list-item.css'
 
-export default function AmployeesListItem({name, salary}) {
+export default function AmployeesListItem({name, salary, increase}) {
+    let className = 'list-group-item d-flex justify-content-between'
+
 	return (
-		<li className="list-group-item d-flex justify-content-between">
+		<li className={increase ? className + ' increase': className}>
             <span className="list-group-item-label">{name}</span>
             <input type="text" className="list-group-item-input" defaultValue={salary + '$'}/>
             <div className='d-flex justify-content-center align-items-center'>

@@ -9,10 +9,10 @@ import AmployeesAddForm from '../amployees-add-form/amployees-add-form'
 export default function App(){
 
 	const employees = [
-		{ name: 'Артем Ковальчук', salary: 1000 },
-		{ name: 'Олена Мельник', salary: 800 },
-		{ name: 'Максим Шевченко', salary: 500 },
-		{ name: 'Ірина Ткаченко', salary: 2300 }
+		{ name: 'Артем Ковальчук', salary: 1000, increase: false},
+		{ name: 'Олена Мельник', salary: 800, increase: false},
+		{ name: 'Максим Шевченко', salary: 500, increase: false},
+		{ name: 'Ірина Ткаченко', salary: 2300, increase: true}
 		];
 
 	return (
