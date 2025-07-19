@@ -12,7 +12,7 @@ export default function AmployeesListItem({name, salary, increase}) {
                     className="btn-cookie btn-sm ">
                     <i className="fas fa-cookie"></i>
                 </button>
-
+                
                 <button type="button"
                         className="btn-trash btn-sm ">
                     <i className="fas fa-trash"></i>
