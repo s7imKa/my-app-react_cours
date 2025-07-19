@@ -1,0 +1,136 @@
+{
+	// ─── Загальний вигляд ───────────────────────────────
+	"workbench.tree.indent": 15,
+	"workbench.list.smoothScrolling": true,
+	"explorer.compactFolders": true,
+	"workbench.statusBar.visible": false,
+	"workbench.layoutControl.enabled": false,
+	"workbench.editor.editorActionsLocation": "default",
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.editor.tabSizing": "shrink",
+	"window.density.editorTabHeight": "compact",
+	"window.commandCenter": false,
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.lineHeight": 21,
+	"explorer.decorations.badges": false,
+
+	// ─── Експлорер ──────────────────────────────────────
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+
+	// ─── Вигляд коду / редактор ─────────────────────────
+	"editor.lineNumbers": "on",
+	"editor.renderLineHighlight": "line",
+	"editor.renderLineHighlightOnlyWhenFocus": true,
+	"editor.glyphMargin": false,
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.smoothScrolling": true,
+	"editor.scrollBeyondLastLine": true,
+	"editor.folding": false,
+	"editor.minimap.enabled": false,
+	"editor.detectIndentation": true,
+	"editor.insertSpaces": false,
+	"editor.suggestSelection": "first",
+	"editor.multiCursorModifier": "alt",
+	"editor.cursorBlinking": "expand",
+	"editor.cursorStyle": "line-thin",
+	"editor.cursorSmoothCaretAnimation": "explicit",
+	"editor.hideCursorInOverviewRuler": true,
+	"editor.renderControlCharacters": false,
+	"editor.linkedEditing": true,
+	"editor.wordWrap": "bounded",
+	"editor.wrappingIndent": "same",
+	"editor.wordWrapColumn": 100,
+	"editor.stickyScroll.enabled": false,
+	"editor.stickyScroll.scrollWithEditor": false,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit"
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	// ─── Візуальні кольори ──────────────────────────────
+	"workbench.colorCustomizations": {
+		"editorLineNumber.activeForeground": "#c65900"
+	},
+
+	// ─── Підказки, Emmet, HTML ──────────────────────────
+	"html.autoClosingTags": true,
+	"html.completion.attributeDefaultValue": "singlequotes",
+	"emmet.includeLanguages": {
+		"blade": "html",
+		"javascript": "javascriptreact"
+	},
+	"emmet.triggerExpansionOnTab": true,
+
+	// ─── Unicode / захист ───────────────────────────────
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"editor.unicodeHighlight.allowedCharacters": {
+		"а": true,
+		"с": true,
+		"Т": true,
+		"б": true,
+		"е": true,
+		" ": true
+	},
+
+	// ─── Copilot Chat, CodeLens, шрифт ──────────────────
+	"editor.inlayHints.fontFamily": "PragmataPro",
+	"editor.codeLensFontFamily": "PragmataPro",
+	"chat.editor.fontFamily": "PragmataPro",
+
+	// ─── Термінал ───────────────────────────────────────
+	"terminal.integrated.fontFamily": "PragmataPro Liga",
+	"terminal.integrated.tabs.enabled": false,
+	"terminal.integrated.cursorStyle": "line",
+
+	// ─── Prettier ───────────────────────────────────────
+	"prettier.semi": false,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.arrowParens": "avoid",
+
+	// ─── JavaScript / TypeScript ────────────────────────
+	"javascript.autoClosingTags": true,
+	"typescript.autoClosingTags": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.quoteStyle": "single",
+	"javascript.preferences.quoteStyle": "single",
+	"javascript.format.semicolons": "remove",
+	"typescript.format.semicolons": "remove",
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+
+	// ─── Breadcrumbs ────────────────────────────────────
+	"breadcrumbs.icons": false,
+	"breadcrumbs.showKeys": false,
+	"breadcrumbs.showFiles": false,
+	"breadcrumbs.symbolPath": "off",
+
+	// ─── Debug / Налагодження ───────────────────────────
+	"debug.toolBarLocation": "hidden",
+	"debug.focusWindowOnBreak": false,
+	"debug.showInlineBreakpointCandidates": false,
+	"debug.showBreakpointsInOverviewRuler": false,
+
+	// ─── Git / Smart Commit ─────────────────────────────
+	"git.enableSmartCommit": true,
+
+	// ─── Фільтрація / виключення ────────────────────────
+	"files.exclude": {
+		"**/.expo": true,
+		"**/.expo-shared": true,
+		"**/.idea": true,
+		"**/.nuxt": true
+	},
+	"files.defaultLanguage": "plaintext",
+
+	// ─── Інше ───────────────────────────────────────────
+	"diffEditor.ignoreTrimWhitespace": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"window.confirmBeforeClose": "keyboardOnly",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.accessibilitySupport": "off"
+}
