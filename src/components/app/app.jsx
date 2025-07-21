@@ -12,7 +12,7 @@ export default function App(){
 		{ name: 'Артем Ковальчук', salary: 1000, increase: false},
 		{ name: 'Олена Мельник', salary: 800, increase: false},
 		{ name: 'Максим Шевченко', salary: 500, increase: false},
-		{ name: 'Ірина Ткаченко', salary: 2300, increase: true}
+		{ name: 'Ірина Ткаченко', salary: 2300, increase: false}
 		];
 
 	return (
