@@ -26,7 +26,7 @@ export default class AmployeesListItem extends Component {
         const classText = 'list-group-item d-flex justify-content-between'
         let className = this.state.star ? classText + ' like' : classText
         
-        const {name, salary} = this.props;
+        const {name, salary, onDelete} = this.props;
 
         return (
             <li className={this.state.increase ? className + ' increase': className}>
@@ -42,6 +42,7 @@ export default class AmployeesListItem extends Component {
                     </button>
                     
                     <button type="button"
+                            onClick={onDelete}
                             className="btn-trash btn-sm ">
                         <i className="fas fa-trash"></i>
                     </button>
