@@ -19,12 +19,12 @@ export default class App extends Component {
 				{
 					name: 'Артем Ковальчук',
 					salary: 1000,
-					increase: true,
+					increase: false,
 					rise: false,
 					id: newId(),
 				},
 				{
-					name: 'Олена Мельник',
+					name: 'Алена Мельник',
 					salary: 800,
 					increase: false,
 					rise: false,
@@ -45,6 +45,8 @@ export default class App extends Component {
 					id: newId(),
 				},
 			],
+			term: '',
+			filter: '',
 		}
 	}
 
@@ -80,34 +82,68 @@ export default class App extends Component {
 
 	onToggleProp = (id, prop) => {
 		this.setState(({ employees }) => ({
-			employees: employees.map(item => item.id === id ? { ...item, [prop]: !item[prop] } : item),
+			employees: employees.map(item =>
+				item.id === id ? { ...item, [prop]: !item[prop] } : item
+			),
 		}))
 	}
 
+	serarchTerm = (item, term) => {
+		if (term === 0) {
+			return item
+		}
+		const filter = item.filter(elem => elem.name.indexOf(term) > -1)
+		return filter
+	}
+
+	onUpdateSearch = term => {
+		this.setState({ term: term })
+	}
+
+	filterEmployees = (item, filter) => {
+		switch (filter) {
+
+			case 'rise':
+				return item.filter(item => item.rise === true)
+			case 'moreSalary':
+				return item.filter(item => item.salary > 1000)
+			default:
+				return item
+		}
+	}
+
+	onUpdateFilter = filter => {
+		this.setState({ filter: filter })
+	}
 
 	render() {
-		const { employees } = this.state
+		const { employees, term, filter } = this.state
 		const incresed = employees.filter(item => item.increase === true).length
 		const sumEmployees = employees.length
+		const search = this.serarchTerm(employees, term)
+		const visibleData = this.filterEmployees(search, filter)
 
 		return (
 			<div className='app'>
 				{/* Загальна інформація про співробітників */}
 				<AppInfo
-				    key={`${sumEmployees}-${incresed}`}
+					key={`${sumEmployees}-${incresed}`}
 					counterEmployees={sumEmployees}
 					salaryBonus={incresed}
 				/>
 
 				{/* Панель пошуку і фільтрів */}
 				<div className='search-panel'>
-					<SearchPanel placeholder={'Знайти співробітника..'} />
-					<AppFilter />
+					<SearchPanel
+						placeholder={'Знайти співробітника..'}
+						onUpdateSearch={this.onUpdateSearch}
+					/>
+					<AppFilter onUpdateFilter={this.onUpdateFilter}/>
 				</div>
 
 				{/* Список співробітників */}
 				<AmployeesList
-					data={employees}
+					data={visibleData}
 					onDelete={this.deleteItem}
 					onToggleProp={this.onToggleProp}
 				/>
