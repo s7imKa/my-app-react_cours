@@ -1,18 +1,17 @@
-import AmployeesListItem from '../amployees-list-item/amployees-list-item';
+import AmployeesListItem from '../amployees-list-item/amployees-list-item'
 
 import './amployees-list.css'
 
-export default function AmployeesList({data, onDelete}) {
-	
+export default function AmployeesList({ data, onDelete }) {
 	return (
 		<ul className='amployees-list list-group'>
-			{data.map((employees, index) => (
-				<AmployeesListItem 
-				key={index+1} 
-				{...employees} 
-				onDelete={() => onDelete(index+1)}/>
+			{data.map(employees => (
+				<AmployeesListItem
+					key={employees.id}
+					{...employees}
+					onDelete={() => onDelete(employees.id)}
+				/>
 			))}
-	
 		</ul>
 	)
 }
