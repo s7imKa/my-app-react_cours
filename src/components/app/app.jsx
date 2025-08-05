@@ -82,9 +82,7 @@ export default class App extends Component {
 
 	onToggleProp = (id, prop) => {
 		this.setState(({ employees }) => ({
-			employees: employees.map(item =>
-				item.id === id ? { ...item, [prop]: !item[prop] } : item
-			),
+			employees: employees.map(item => (item.id === id ? { ...item, [prop]: !item[prop] } : item)),
 		}))
 	}
 
@@ -102,7 +100,6 @@ export default class App extends Component {
 
 	filterEmployees = (item, filter) => {
 		switch (filter) {
-
 			case 'rise':
 				return item.filter(item => item.rise === true)
 			case 'moreSalary':
@@ -138,7 +135,7 @@ export default class App extends Component {
 						placeholder={'Знайти співробітника..'}
 						onUpdateSearch={this.onUpdateSearch}
 					/>
-					<AppFilter onUpdateFilter={this.onUpdateFilter}/>
+					<AppFilter onUpdateFilter={this.onUpdateFilter} />
 				</div>
 
 				{/* Список співробітників */}

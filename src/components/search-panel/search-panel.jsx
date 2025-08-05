@@ -11,7 +11,7 @@ export default class SearchPanel extends Component {
 
 	onUpdateSearch = e => {
 		const term = e.target.value
-		this.setState({term: term})
+		this.setState({ term: term })
 		this.props.onUpdateSearch(term)
 	}
 
